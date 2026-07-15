@@ -16,7 +16,7 @@
     minutes: document.getElementById("minutes"),
     seconds: document.getElementById("seconds"),
   };
-  const progressItems = Array.from(document.querySelectorAll(".progress-item[data-progress]"));
+  const progressItems = Array.from(document.querySelectorAll(".progress-item"));
   const revealItems = Array.from(document.querySelectorAll(".reveal"));
   const ambientLayers = Array.from(document.querySelectorAll(".ambient"));
   const featureCards = Array.from(document.querySelectorAll(".feature-card"));
@@ -89,6 +89,21 @@
     countdownNodes.seconds.textContent = String(remainingSeconds).padStart(2, "0");
   };
 
+  const getProgressValue = (item) => {
+    const explicitValue = item.dataset.progress;
+    if (explicitValue && !Number.isNaN(Number(explicitValue))) {
+      return Number(explicitValue);
+    }
+
+    const percentLabel = item.querySelector(".progress-item__header span");
+    if (!percentLabel) {
+      return 0;
+    }
+
+    const match = percentLabel.textContent.match(/(\d+(?:\.\d+)?)\s*%?/);
+    return match ? Number(match[1]) : 0;
+  };
+
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -99,7 +114,7 @@
         entry.target.classList.add("is-visible");
 
         if (entry.target.classList.contains("progress-item")) {
-          const value = Number(entry.target.dataset.progress || 0);
+          const value = getProgressValue(entry.target);
           entry.target.style.setProperty("--value", value);
         }
       });
