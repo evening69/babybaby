@@ -1,21 +1,22 @@
 :root {
   color-scheme: dark;
   --bg-1: #07111f;
-  --bg-2: #0d1b33;
-  --surface: rgba(9, 18, 34, 0.56);
-  --surface-strong: rgba(10, 19, 36, 0.82);
+  --bg-2: #0b1630;
+  --surface: rgba(12, 20, 38, 0.56);
+  --surface-strong: rgba(13, 24, 44, 0.82);
   --border: rgba(255, 255, 255, 0.12);
   --text: #fafafa;
-  --muted: rgba(248, 250, 252, 0.72);
+  --muted: rgba(244, 246, 255, 0.76);
   --soft: rgba(255, 255, 255, 0.08);
-  --pink: #f7a8cb;
-  --blue: #8fd3ff;
-  --shadow: 0 20px 50px rgba(3, 10, 26, 0.34);
+  --pink: #d9cbff;
+  --lavender: #b8a9ff;
+  --blue: #8bbcff;
+  --shadow: 0 20px 50px rgba(3, 10, 26, 0.3);
   --radius-xl: 30px;
   --radius-lg: 22px;
   --radius-md: 16px;
   --content-width: 1180px;
-  --focus: 0 0 0 3px rgba(143, 211, 255, 0.36), 0 0 0 6px rgba(247, 168, 203, 0.18);
+  --focus: 0 0 0 3px rgba(184, 169, 255, 0.36), 0 0 0 6px rgba(139, 188, 255, 0.18);
 }
 
 *,
@@ -34,7 +35,7 @@ body {
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   background:
     radial-gradient(circle at top, rgba(143, 211, 255, 0.16), transparent 26%),
-    radial-gradient(circle at 18% 20%, rgba(247, 168, 203, 0.12), transparent 22%),
+    radial-gradient(circle at 18% 20%, rgba(184, 169, 255, 0.16), transparent 22%),
     radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.08), transparent 18%),
     linear-gradient(180deg, var(--bg-1), var(--bg-2));
   color: var(--text);
@@ -109,7 +110,7 @@ a:focus-visible {
   letter-spacing: 0.26em;
   text-transform: uppercase;
   font-size: 0.76rem;
-  color: rgba(250, 250, 250, 0.56);
+  color: rgba(244, 246, 255, 0.64);
 }
 
 h1,
@@ -179,8 +180,8 @@ h3 {
 
 .button--primary {
   color: #08111f;
-  background: linear-gradient(135deg, #ffffff, #8fd3ff 125%);
-  box-shadow: 0 14px 32px rgba(143, 211, 255, 0.18);
+  background: linear-gradient(135deg, #ffffff, #8bbcff 120%, #b8a9ff 145%);
+  box-shadow: 0 14px 32px rgba(139, 188, 255, 0.16);
 }
 
 .button--secondary {
@@ -194,7 +195,7 @@ h3 {
 .countdown-shell,
 .feature-card,
 .quote {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
   border: 1px solid var(--border);
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow);
@@ -257,8 +258,8 @@ h3 {
   width: 0%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(143, 211, 255, 0.95), rgba(247, 168, 203, 0.95));
-  box-shadow: 0 0 18px rgba(143, 211, 255, 0.22);
+  background: linear-gradient(90deg, rgba(139, 188, 255, 0.95), rgba(184, 169, 255, 0.95));
+  box-shadow: 0 0 18px rgba(139, 188, 255, 0.22);
   transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -345,10 +346,10 @@ h3 {
 
 .feature-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(143, 211, 255, 0.28);
+  border-color: rgba(184, 169, 255, 0.28);
   box-shadow:
     0 18px 55px rgba(2, 6, 23, 0.35),
-    0 0 0 1px rgba(143, 211, 255, 0.1) inset;
+    0 0 0 1px rgba(184, 169, 255, 0.1) inset;
 }
 
 .feature-card__icon {
@@ -357,7 +358,7 @@ h3 {
   border-radius: 999px;
   display: grid;
   place-items: center;
-  background: rgba(250, 250, 250, 0.07);
+  background: rgba(250, 250, 250, 0.09);
   border: 1px solid rgba(250, 250, 250, 0.12);
   font-size: 1.1rem;
 }
@@ -378,11 +379,11 @@ h3 {
   align-items: center;
   padding: 1.4rem 1.65rem;
   border-top: 1px solid rgba(250, 250, 250, 0.09);
-  color: rgba(250, 250, 250, 0.8);
+  color: rgba(244, 246, 255, 0.84);
 }
 
 .heart-inline {
-  color: var(--pink);
+  color: var(--lavender);
 }
 
 .ambient,
@@ -407,19 +408,19 @@ h3 {
 .ambient--one {
   top: -6rem;
   left: -8rem;
-  background: radial-gradient(circle, rgba(143, 211, 255, 0.34), transparent 68%);
+  background: radial-gradient(circle, rgba(139, 188, 255, 0.34), transparent 68%);
 }
 
 .ambient--two {
   top: 18%;
   right: -10rem;
-  background: radial-gradient(circle, rgba(247, 168, 203, 0.28), transparent 70%);
+  background: radial-gradient(circle, rgba(184, 169, 255, 0.3), transparent 70%);
 }
 
 .ambient--three {
   bottom: -10rem;
   left: 30%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 70%);
 }
 
 .particle-field {
@@ -435,8 +436,8 @@ h3 {
   inset: 0;
   background-image:
     radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.26) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 78% 22%, rgba(143, 211, 255, 0.26) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 25% 76%, rgba(247, 168, 203, 0.24) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 78% 22%, rgba(139, 188, 255, 0.26) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 25% 76%, rgba(184, 169, 255, 0.24) 0 1px, transparent 1.8px),
     radial-gradient(circle at 68% 68%, rgba(255, 255, 255, 0.22) 0 1px, transparent 1.8px),
     radial-gradient(circle at 85% 82%, rgba(255, 255, 255, 0.2) 0 1px, transparent 1.8px);
   background-size: 100% 100%;
@@ -456,7 +457,7 @@ h3 {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(143, 211, 255, 0.3), rgba(247, 168, 203, 0.08) 55%, transparent 72%);
+  background: radial-gradient(circle, rgba(139, 188, 255, 0.3), rgba(184, 169, 255, 0.1) 55%, transparent 72%);
   filter: blur(2px);
   transform: translate3d(-100px, -100px, 0);
   opacity: 0;
@@ -473,7 +474,7 @@ h3 {
   min-width: min(92vw, 20rem);
   padding: 0.95rem 1.2rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(7, 17, 31, 0.92);
   color: var(--text);
   text-align: center;
@@ -500,7 +501,7 @@ h3 {
   inset: 0;
   display: grid;
   place-items: center;
-  background: linear-gradient(180deg, rgba(7, 17, 31, 0.96), rgba(13, 27, 51, 0.98));
+  background: linear-gradient(180deg, rgba(7, 17, 31, 0.96), rgba(11, 22, 48, 0.98));
   z-index: 100;
   transition:
     opacity 420ms ease,
@@ -519,7 +520,7 @@ h3 {
   width: 3.4rem;
   height: 3.4rem;
   border-radius: 50%;
-  background: conic-gradient(from 180deg, rgba(143, 211, 255, 0.95), rgba(247, 168, 203, 0.95), rgba(255, 255, 255, 0.95), rgba(143, 211, 255, 0.95));
+  background: conic-gradient(from 180deg, rgba(139, 188, 255, 0.95), rgba(184, 169, 255, 0.95), rgba(255, 255, 255, 0.95), rgba(139, 188, 255, 0.95));
   animation: spin 1.2s linear infinite;
   mask: radial-gradient(circle at center, transparent 44%, #000 45%);
 }
